@@ -7,7 +7,7 @@ import (
 )
 
 func ReadFile(name string) string {
-	data, err := os.ReadFile("inputs/1.txt")
+	data, err := os.ReadFile(name)
 	if err != nil {
 		log.Fatal(err)
 	}

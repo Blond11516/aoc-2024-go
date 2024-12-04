@@ -3,6 +3,7 @@ package main
 import (
 	"aoc2024/helpers"
 	day1 "aoc2024/solvers/1"
+	day3 "aoc2024/solvers/3"
 	"fmt"
 	"log"
 	"os"
@@ -15,7 +16,7 @@ func main() {
 	day := GetDay()
 	part := GetPart()
 
-	input := helpers.ReadFile("inputs/1.txt")
+	input := helpers.ReadFile(fmt.Sprintf("inputs/%d.txt", day))
 
 	result := solvers[day][part-1](input)
 
@@ -26,6 +27,7 @@ type SolverFunc = func(string) int
 
 var solvers = map[int]([2]SolverFunc){
 	1: [2]SolverFunc{day1.Part1, day1.Part2},
+	3: [2]SolverFunc{day3.Part1, day3.Part2},
 }
 
 func GetDay() int {
